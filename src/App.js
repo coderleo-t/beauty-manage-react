@@ -1,5 +1,5 @@
-import React from 'react';
-import {BrowserRouter, Switch} from 'react-router-dom'
+import React, {Suspense} from 'react';
+import {BrowserRouter} from 'react-router-dom'
 import {renderRoutes} from 'react-router-config'
 import routes from './router/index'
 import './index.css'
@@ -10,9 +10,9 @@ export default function App() {
   return(
     <div>
       <BrowserRouter>
-        <Switch>
+        <Suspense fallback={<div>loading</div>}>
           {renderRoutes(routes)}
-        </Switch>
+        </Suspense>
       </BrowserRouter>
     </div>
   )

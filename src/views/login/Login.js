@@ -20,6 +20,7 @@ const loginButton = {
 
 export default function Login(props) {
   function intoBackstage() {
+    console.log()
     props.history.push('/frame')
   }
   return(
